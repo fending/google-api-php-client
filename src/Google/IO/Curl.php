@@ -74,6 +74,7 @@ class Google_IO_Curl extends Google_IO_Abstract
       }
       curl_setopt($curl, CURLOPT_HTTPHEADER, $curlHeaders);
     }
+    curl_setopt($curl, CURLOPT_HTTP_VERSION, CURL_HTTP_VERSION_1_0);
     curl_setopt($curl, CURLOPT_URL, $request->getUrl());
 
     curl_setopt($curl, CURLOPT_CUSTOMREQUEST, $request->getRequestMethod());
